@@ -210,6 +210,20 @@
         </div>
 
         <div class="feature-card">
+            <h3>8.5 Batch Delete Tasks</h3>
+            <form action="push" method="POST">
+                <input type="hidden" name="action" value="batch-delete">
+                <label for="task-names">Task Names (comma separated):</label>
+                <input type="text" id="task-names" name="task-names" placeholder="task1,task2,task3" required>
+                <label style="display: flex; align-items: center; gap: 10px;">
+                    <input type="checkbox" name="async" value="true">
+                    Perform Asynchronously
+                </label>
+                <button type="submit">Batch Delete Tasks</button>
+            </form>
+        </div>
+
+        <div class="feature-card">
             <h3>9. View Queue Statistics</h3>
             <form action="push" method="POST">
                 <input type="hidden" name="action" value="stats">
