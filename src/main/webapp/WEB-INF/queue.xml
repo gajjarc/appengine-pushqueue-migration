@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queue-entries>
+    <queue>
+        <name>demo-queue</name>
+        <rate>5/s</rate>
+        <bucket-size>10</bucket-size>
+        <retry-parameters>
+            <task-retry-limit>3</task-retry-limit>
+            <min-backoff-seconds>10</min-backoff-seconds>
+            <max-backoff-seconds>60</max-backoff-seconds>
+        </retry-parameters>
+    </queue>
+    <queue>
+        <name>age-limit-queue</name>
+        <rate>1/s</rate>
+        <retry-parameters>
+            <task-age-limit>1m</task-age-limit>
+            <min-backoff-seconds>5</min-backoff-seconds>
+        </retry-parameters>
+    </queue>
+</queue-entries>
